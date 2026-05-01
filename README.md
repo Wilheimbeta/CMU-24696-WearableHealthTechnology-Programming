@@ -1,4 +1,4 @@
-# CMU-24696-WearableHealthTechnology-Programming
+# CMU-24665-WearableHealthTechnology-Programming
 The repository is used for recording the programming for 24696. The group member includes Chester Xiao, Debasmita Kanungo, Owen Liston, Yiman Wu and Zhengyang Bi. 
 
 For detailed instruction, see GUIDE.md.
