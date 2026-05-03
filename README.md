@@ -52,7 +52,7 @@ Exp 0: Baseline from scratch and pretrained LOSO testing on all architectures �
 
 Result: 
 As a baseline (from scratch), all architecture models achieved high accuracy on phone data but performed poorly on watch data.
-Self-supervised pre-training enhances performance on the sensor type (watch or phone) for the model’s original sensor type
+Self-supervised pre-training enhances performance on the sensor type (watch or phone) for the model’s original sensor type.
 
 Exp 1: Labeled data reduction by fractionating the total data LOSO testing → Aim 2
 
@@ -63,33 +63,33 @@ Exp 2: LIMU-BERT-X generalizability to watch data with varying pre-training util
 Exp 3: SSL-Wearables generalizability to  phone data with varying pre-training utilizing LOSO testing → Aim 2
 
 Result: 
-Additional pre-training on a new dataset does not increase accuracy
+Additional pre-training on a new dataset does not increase accuracy.
 
 Exp 4: 3-channel (accel) vs 6-channel (accel + gyro) sensor comparison utilizing LOSO testing → Aim 2
 
 Result: 
-The addition of a gyroscope improves accuracy most prominently for phone data depending on the model’s architecture
+The addition of a gyroscope improves accuracy most prominently for phone data depending on the model’s architecture.
 
 Exp 5&6: Cross-dataset compatibility (train on one dataset, test on another) with various datasets and variables → Aim 1 and 2
 
 Result:
-As a baseline, models trained and tested on watch data perform better than phone based models 
-Self-supervised pretraining increases cross-dataset generalizability on three activities: standing, sitting, walking
-Self-supervised pre-training increases watch generalizability for 5 activities, whereas phone results are direction dependent
+As a baseline, models trained and tested on watch data perform better than phone based models .
+Self-supervised pretraining increases cross-dataset generalizability on three activities: standing, sitting, walking.
+Self-supervised pre-training increases watch generalizability for 5 activities, whereas phone results are direction dependent.
 
 Exp 7: Labeled data reduction by including and excluding entire subject’s data → Aim  2
 
 Result:
-Training on more subjects yields better results and pre-training does not significantly perform better than models from scratch
+Training on more subjects yields better results and pre-training does not significantly perform better than models from scratch.
 
 Exp 8: Cross dataset and LOSO testing on our collected datasets (controlled and uncontrolled) → Aim 3
 Addtional Information:
-Data collection protocol consisted of five activities performed in a controlled and uncontrolled manner
+Data collection protocol consisted of five activities performed in a controlled and uncontrolled manner.
 
 Result:
-SSL-Wearables performs best when cross testing on our data with HHAR, however the models perform differently on uncontrolled versus controlled
-Uncontrolled data aligns best with In-The-Wild phone pre-training domain 
-Sensor location has an impact on over accuracy as well as accuracy per activity when trained on LIMU-BERT X data
+SSL-Wearables performs best when cross testing on our data with HHAR, however the models perform differently on uncontrolled versus controlled.
+Uncontrolled data aligns best with In-The-Wild phone pre-training domain.
+Sensor location has an impact on over accuracy as well as accuracy per activity when trained on LIMU-BERT X data.
 
 # Conclusion
 From 9 experiments, the main takeaway is that Pre-training domain matters more than architecture.
