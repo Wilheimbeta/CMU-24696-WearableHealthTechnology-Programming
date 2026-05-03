@@ -112,6 +112,18 @@ Device Placement
 Inconsistent placement across datasets
 Fixed positions with no angular variation in our collected data
 
+# Future development:
+Activity Expansion
+Explore other activities beyond current benchmarks to broaden model utility.
+
+Population Diversity
+Investigate variables more closely, including disabilities, body type, sex, and BMI.
+
+IMU Optimization
+Explore additional IMU positions to identify optimal sensor placement.
+
+Evaluation Standardization
+Develop a unified, quantifiable evaluation framework for assessing pretraining quality and model robustness that generalizes across devices, datasets, and deployment scenarios.
 
 
 
