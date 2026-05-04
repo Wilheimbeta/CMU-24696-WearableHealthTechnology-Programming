@@ -7,14 +7,14 @@ Link to Completed Programming: https://drive.google.com/file/d/1qr_pexqpEJVYagTL
 
 # Project Description
 
-HAR can provide clinicians with real-world data, for more personalized and proactive patient care and research at a low cost.
+HAR with great generalizability can provide clinicians with real-world data, which assists on more costonmized patient care and low-cost research.
 
 The ideal generalized HAR model is expected to have following three features:
-1. Low-cost, wearable-based HAR enables remote monitoring, reducing clinic burden and improving rural healthcare access.
-2. Robust cross-device models ensure advanced health tracking is not limited to expensive, proprietary ecosystems.
-3. Transparent evaluation and explicit reporting of effects and parameter trade-offs promotes reproducible and clinically interpretable HAR research for future improvement 
+1. Reduction on clinic burden and improvement on rural healthcare access through reduction of cost and enabling remote monitoring by wearable-based HAR.
+2. Reduction on limitation of expensive prorietary ecosystems for advanced health tracking through robustness of models on cross-devices scenario. 
+4. Transparent evaluation and explicit reporting of effects and parameter trade-offs promotes reproducible and clinically interpretable HAR research for future improvement 
 
-For fulfilling this expectation, LIMU-BERT-X and SSL-Wearable (HARNet) are induced.
+For fulfilling this expectation, LIMU-BERT-X and SSL-Wearable (HARNet) are induced. Here are some features attractive for selection. 
 
 
 LIMU-BERT-X: Random Crops 
@@ -28,9 +28,11 @@ SSL(ResNet): Fixed 10 second windows
              Gravity Scaling 
              Multi-task augmentation
 
-However, there is a lack of research on human activity recognition model generalizability on large scale, unlabeled datasets. To be specific, human activity recognition models that achieve high accuracies in controlled lab settings, fail to maintain performance in real world settings. Supervised models overfit to specific populations and sensor frequencies and fail to maintain high accuracy across different model architectures and new populations. Current research lacks a robust framework to leverage unlabeled data to generalize across models. 
+However, only selection of two models are not enough. There is still a lack of research on human activity recognition model generalizability on large scale, unlabeled datasets. To be specific, human activity recognition models that achieve high accuracies in controlled lab settings, fail to maintain performance in real world scenario. Supervised models overfit to specific populations and sensor frequencies and fail to maintain high accuracy across different model architectures and new populations. Current research lacks a robust framework to leverage unlabeled data to generalize across models. According to background research, a technique "pretraining" would be assistive to generalization of HAR models. 
 
-Based on the demand statement, the project will solve the engineering problem: Does pre-training on large, unlabeled datasets improve accuracy and generalizability across different device types and datasets? Based on this problem, there are three aims:
+Based on the demand statement, the project attempts to solve the engineering problem: Does pre-training on large, unlabeled datasets improve accuracy and generalizability across different device types and datasets? 
+
+Based on Engineering problem, there are three aims for research on solution:
 1. Establish a baseline for models from scratch and pre-trained on large unlabeled datasets
 2. Investigate the relationship between self-supervised weights and model architecture, amount of labeled training data, input data, and more
 3. Test generalization of models on data collected in this study in a controlled and uncontrolled real world setting 
@@ -93,43 +95,39 @@ Sensor location has an impact on over accuracy as well as accuracy per activity 
 
 # Conclusion
 From 9 experiments, the main takeaway is that Pre-training domain matters more than architecture.
-1. 6ch significantly improves scratch models performance by +15%.
+1. 6ch significantly improves scratch models performance by 15% in accuracy.
 2. Domain alignment is a stronger predictor of success than architectural complexity.
 3. Significant accuracy drop when moving from benchmarks (73-88%) to real-world data (20-58%).
-Pre-trained models achieve ~87% accuracy with only 25% of labeled data. Pre-training is a powerful and efficient substitute for exhaustive labeling.
+In conclusion, pre-trained models achieve ~87% accuracy with only 25% of labeled data. Pre-training is proved as a powerful and efficient substitute for exhaustive labeling according to research.
 
-There are several limitations worth acknowledging:
+There are also several limitations worth acknowledging for current work:
 
 Data Imbalance & Scope
-Lopsided HHAR phone vs. watch data
-No cross-device collected data (same IMU set)
-Large dataset only partially analyzed
+For baseline dataset, HHAR, contains both phone and watch data. There has no cross-device settings in our collected data (same IMU set)
+For dataset collected, it is only partially analyzed.
 
 Population & Generalization
-Only 5 activity classes tested
-Subjects limited to healthy young adults
-Findings may not transfer to clinical/elderly
+Only 5 activity classes tested, which subjects limited to healthy young adults. Findings may not transfer to clinical or elderly subjects.
 
 Performance Measurement
-No standardized metric exists to evaluate pretraining quality across devices and datasets 
-Lack of objective ground truth to define absolute success; limited to within-experiment comparison winners.
+There has no standardized metric exists to evaluate pretraining quality across devices and datasets. 
+Lack of objective ground truth to define absolute success for limitation to within-experiment comparison winners.
 
 Device Placement
-Inconsistent placement across datasets
-Fixed positions with no angular variation in our collected data
+Inconsistent placements across datasets are inconsistent, while our collected data only has fixed positions with no variation.
 
 # Future development:
 Activity Expansion:
-Explore other activities beyond current benchmarks to broaden model utility.
+Exploration on other activities beyond current benchmarks to broaden model utility.
 
 Population Diversity:
-Investigate variables more closely, including disabilities, body type, sex, and BMI.
+Investigation on variables which are more closely, including disabilities, body type, sex, and BMI.
 
 IMU Optimization:
-Explore additional IMU positions to identify optimal sensor placement.
+Exploration on additional IMU positions to identify optimal sensor placement.
 
 Evaluation Standardization:
-Develop a unified, quantifiable evaluation framework for assessing pretraining quality and model robustness that generalizes across devices, datasets, and deployment scenarios.
+Developement on a unified, quantifiable evaluation framework for assessing pretraining quality and model robustness that generalizes across devices, datasets, and deployment scenarios.
 
 
 
